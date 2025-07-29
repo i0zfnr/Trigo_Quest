@@ -1057,3 +1057,83 @@ body.dark-mode .calculator-input {
   }
 }
 
+/* Responsive Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Specific adjustments for your tables/images */
+.feature-card img {
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* For the complex quadrant image */
+.feature-card img[alt="Principal Values Table"],
+.feature-card img[alt="Trigonometric Graphs"],
+.feature-card img[alt="Trig Identities"] {
+  max-width: 45%;
+  height: auto;
+}
+
+/* Tables responsiveness */
+.feature-card table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Math formula images */
+.math-icon img {
+  max-width: 24px;
+}
+
+/* Header and footer logos */
+.header-logo, .footer-logo {
+  max-width: 60px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  /* Adjust images for smaller screens */
+  .feature-card img {
+    width: 95%;
+  }
+  
+  /* Make tables scroll horizontally on mobile */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  /* Adjust header/footer logos */
+  .header-logo, .footer-logo {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card img[src="image/QUADRANTS.png"] {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+.responsive-image {
+  width: 100%;
+  margin: 15px 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.responsive-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
