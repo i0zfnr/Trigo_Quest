@@ -1075,7 +1075,7 @@ img {
 .feature-card img[alt="Principal Values Table"],
 .feature-card img[alt="Trigonometric Graphs"],
 .feature-card img[alt="Trig Identities"] {
-  max-width: 65%;
+  max-width: auto;
   height: auto;
 }
 
