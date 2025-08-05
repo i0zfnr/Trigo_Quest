@@ -1097,10 +1097,10 @@ img {
   height: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   /* Adjust images for smaller screens */
   .feature-card img {
-    width: 95%;
+    width: 115%;
   }
   
   /* Make tables scroll horizontally on mobile */
@@ -1112,7 +1112,7 @@ img {
   
   /* Adjust header/footer logos */
   .header-logo, .footer-logo {
-    max-width: 50px;
+    max-width: 100px;
   }
 }
 
@@ -1123,17 +1123,33 @@ img {
   }
 }
 
-.responsive-image {
-  width: 100%;
-  margin: 15px 0;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+/* Add this near the top of your CSS */
+html {
+  scroll-behavior: smooth;
 }
 
-.responsive-image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+[id] {
+  scroll-margin-top: 100px;
 }
+
+/* Add these animation keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.content-section {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.feature-card {
+  animation: fadeIn 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+/* Stagger animations for cards */
+.feature-card:nth-child(2) { animation-delay: 0.3s; }
+.feature-card:nth-child(3) { animation-delay: 0.4s; }
+.feature-card:nth-child(4) { animation-delay: 0.5s; }
 
