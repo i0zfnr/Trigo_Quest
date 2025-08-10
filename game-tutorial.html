@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Tutorial – Trigo Quest</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="math-icons"></div>
+    <div class="header-flex">
+      <div class="header-left">
+        <img src="image/logo.jpg" alt="Trigo Quest Logo" class="header-logo">
+        <div class="header-content">
+          <h1>TRIGO QUEST</h1>
+          <p class="slogan">Fun. Active. Meaningful.</p>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html#home" class="nav-btn"><i class="fas fa-home"></i> Home</a>
+        <a href="fundamentals.html" class="nav-btn"><i class="fas fa-book"></i> Fundamentals</a>
+        <a href="equations.html" class="nav-btn"><i class="fas fa-square-root-alt"></i> Equations</a>
+        <a href="rules.html" class="nav-btn"><i class="fas fa-ruler-combined"></i> Rules</a>
+        <a href="games.html" class="nav-btn"><i class="fas fa-gamepad"></i> Trigo Quest</a>
+        <a href="game-tutorial.html" class="nav-btn"><i class="fas fa-gamepad"></i>Tutorial</a>
+      </nav>
+      <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Game Tutorial Section -->
+    <section id="game-tutorial" class="content-section">
+      <h2>🎮 Game Tutorial</h2>
+      
+      <div class="about-content">
+        <div class="about-text">
+          <p>Learn how to play Trigo Quest with this comprehensive tutorial video. The video covers all the rules, gameplay mechanics, and strategies to help you master the game and improve your trigonometry skills.</p>
+          
+          <h3>📌 Key Features Covered:</h3>
+          <ul class="feature-list">
+            <li><i class="fas fa-check"></i> Game setup and components</li>
+            <li><i class="fas fa-check"></i> Basic movement rules</li>
+            <li><i class="fas fa-check"></i> How to answer trigonometry questions</li>
+            <li><i class="fas fa-check"></i> Special spaces (QR codes, trophies)</li>
+            <li><i class="fas fa-check"></i> Winning strategies</li>
+          </ul>
+          
+          <h3>📋 Before You Play:</h3>
+          <ol>
+            <li>Make sure you have all game components</li>
+            <li>Gather 2-4 players</li>
+            <li>Prepare a calculator and scratch paper</li>
+            <li>Review basic trigonometric concepts if needed</li>
+          </ol>
+        </div>
+        <div class="about-image">
+          <img src="image/img.jpg" alt="Trigo Quest Game Components">
+        </div>
+      </div>
+
+      <!-- Video Tutorial Section -->
+      <<div class="about-section">
+        <h3>Video Tutorial</h3>
+        <p>See the video tutorial here !!</p>
+        <a href="https://www.youtube.com/watch?v=Esrt8gjKC2M" class="download-btn" style="display:inline-block; width:auto;">Play Video</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <img src="image/logo.jpg" alt="Trigo Quest Logo" class="footer-logo">
+        <div class="footer-brand-info">
+          <h3>TRIGO QUEST</h3>
+          <p class="footer-slogan">Fun. Active. Meaningful.</p>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="fundamentals.html">Fundamentals</a></li>
+            <li><a href="equations.html">Equations</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="games.html">Trigo Quest</a></li>
+            <li><a href="game-tutorial.html"> Tutorial</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i>+60 12-954 5838</li>
+            <li><i class="fas fa-map-marker-alt"></i> Politeknik Kota Bharu</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/PoliteknikKotaBharuRasmi/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/polykb_official" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/polykb_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Trigo Quest. All rights reserved.</p>
+      <p>Developed by Student Politeknik, Politeknik Kota Bharu</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', () => {
+      document.querySelector('nav').classList.toggle('show');
+    });
+
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    const container = document.querySelector('.math-icons');
+    const icons = ['fa-superscript','fa-square-root-alt','fa-greater-than-equal',
+                   'fa-infinity','fa-pi','fa-equals','fa-percent'];
+    for (let i = 0; i < 10; i++) {
+      const icon = document.createElement('div');
+      icon.className = 'math-icon';
+      icon.innerHTML = `<i class="fas ${icons[Math.floor(Math.random()*icons.length)]}"></i>`;
+      icon.style.top = `${Math.random()*100}%`;
+      icon.style.left = `${Math.random()*100}%`;
+      icon.style.animationDuration = `${15+Math.random()*10}s`;
+      container.appendChild(icon);
+    }
+  </script>
+</body>
+</html>
