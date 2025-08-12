@@ -75,6 +75,7 @@ header.hero {
   padding: 0 clamp(1rem, 3vw, 2rem); /* Responsive padding */
   gap: clamp(0.75rem, 2vw, 1.25rem); /* Responsive gap */
   width: 100%;
+  margin-right: 50px;
 }
 
 /* Medium devices (tablets, 768px and below) */
@@ -105,7 +106,7 @@ header.hero {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-right: 27px;
+  margin-right: 10px;
 }
 
 .header-logo {
