@@ -40,6 +40,7 @@ header.hero {
   position: relative;
   z-index: 10;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .math-icons {
@@ -66,10 +67,13 @@ header.hero {
 
 .header-flex {
   display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on small screens */
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px; /* Added padding for better edge spacing */
+  gap: 20px; /* Consistent spacing between elements */
 }
 
 .header-left {
@@ -91,16 +95,24 @@ header.hero {
 }
 
 .header-content h1 {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem); /* Responsive font sizing */
   margin: 0;
+  margin-right: 15px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; /* Space between words */
+  line-height: 1.2;
+  white-space: nowrap; /* Prevent line break */
 }
 
 .slogan {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.9);
   margin-top: 3px;
+  margin-right: auto;
   font-weight: 300;
 }
 
@@ -1152,4 +1164,3 @@ html {
 .feature-card:nth-child(2) { animation-delay: 0.3s; }
 .feature-card:nth-child(3) { animation-delay: 0.4s; }
 .feature-card:nth-child(4) { animation-delay: 0.5s; }
-
