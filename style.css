@@ -88,11 +88,15 @@ header.hero {
 
 /* Small devices (phones, 480px and below) */
 @media (max-width: 480px) {
-  .header-flex {
-    padding: 0.5rem;
-    gap: 0.5rem;
-    margin: 0 auto;
-  }
+   .header-flex {
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 0.5rem;
+      margin: 0 auto;
+      text-align: center; /* This ensures text content is centered */
+      justify-content: center; /* Double-check centering of flex items */
+      align-items: center; /* Ensures items are centered horizontally */
+   }
 }
 
 /* Optional: For very large screens (1920px and above) */
